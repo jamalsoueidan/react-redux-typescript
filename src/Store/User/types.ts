@@ -4,8 +4,11 @@ export interface IUser {
     name: string
 }
 
+export const UPDATE_NAME = '@@user/UpdateName';
+export type UPDATE_NAME = typeof UPDATE_NAME;
+
 export interface IUpdateName extends Action {
-    type: '@@user/updatename',
+    type: UPDATE_NAME,
     payload: {
         user: IUser
     }
