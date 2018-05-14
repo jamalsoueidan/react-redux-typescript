@@ -1,0 +1,11 @@
+.vscode/
+.idea/
+.DS_STORE
+build/
+node_modules/
+.module-cache
+typings/
+npm-debug.log
+tmp/
+dist/
+*.log*
