@@ -10,7 +10,7 @@ import { routerReducer, RouterState } from 'react-router-redux';
 
 export interface IApplicationState {
     chat: Chat.Types.IMessages,
-    user: User.IUser,
+    user: User.Types.IUser,
     router: RouterState 
 }
 

@@ -11,7 +11,7 @@ export const initialState: Types.IUser = {
 export const Reducer: R<Types.IUser> = (state: Types.IUser = initialState, action) => {
   switch ((action as Types.UserActions).type) {
     case Types.UPDATE_NAME:
-    return { ...state, user: action.payload.user };
+    return action.payload.user;
       
   }
   return state;

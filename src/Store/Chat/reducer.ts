@@ -10,7 +10,6 @@ export const initialState: Types.IMessages = {
 // export default can lead to problems
 // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
 export const Reducer: R<Types.IMessages> = (state: Types.IMessages = initialState, action) => {
-  console.log(action)
   switch ((action as Types.ChatActions).type) {
     case Types.SEND_MESSSAGE:
       return { messages: [...state.messages, action.payload.message], status: action.type };
