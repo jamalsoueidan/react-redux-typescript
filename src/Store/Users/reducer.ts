@@ -10,14 +10,14 @@ export const initialState: Types.IUsers = {
   all: []
 };
 
-const current: R<Types.IUser> = (state: Types.IUser, action) => {
+const current: R<Types.IUser> = (state: Types.IUser, action: Types.IUpdateName) => {
   if(action.type === Types.UPDATE_NAME)
-      return { name: action.payload, id: 0 }
+      return action.payload.current
 
   return state;
 }
 
-const users: R<Types.IUser[]> = (state: Types.IUser[], action) => {
+const users: R<Types.IUser[]> = (state: Types.IUser[], action: Types.ILoadUsersSuccessAction) => {
   if( action.type === Types.LOAD_USERS_SUCCESS )
       return action.payload;
       

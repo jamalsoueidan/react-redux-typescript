@@ -31,9 +31,7 @@ export type LOAD_USERS_REQUEST = typeof LOAD_USERS_REQUEST;
 
 export interface ILoadUsersSuccessAction extends Action {
     readonly type: LOAD_USERS_SUCCESS,
-    payload: {
-        all: IUser[]
-    }
+    payload: IUser[]
 }
 
 export type UsersActions = IUpdateName | ILoadUsersSuccessAction

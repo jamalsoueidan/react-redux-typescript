@@ -1,21 +1,13 @@
-import { CALL_API } from 'redux-api-middleware';
+import { RSAA } from 'redux-api-middleware';
 import { ActionCreator } from 'redux'
 import * as Types from './types'
 
-export const SendMessage: ActionCreator<Types.ISendMessageAction> = (message: Types.IMessage) => ({
-  type: Types.SEND_MESSSAGE,
-  payload: {
-    message
-  },
-});
-
-
 export const LoadMessages: ActionCreator<any> = () => ({
-  [CALL_API]: {
+  [RSAA]: {
     types: [
-      '@@chat/LoadMessagesAction/Fetch', 
+      Types.LOAD_MESSAGE_REQUEST, 
       Types.LOAD_MESSAGE_SUCCESS, 
-      '@@chat/LoadMessagesAction/Failure'],
+      Types.LOAD_MESSAGE_FAILURE],
     endpoint: '/dist/chat.json',
     method: 'GET',
   }
