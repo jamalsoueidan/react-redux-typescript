@@ -1,4 +1,4 @@
-import Application from './component'
+import PageApplication from './component'
 import {connect} from 'react-redux'
 import {Dispatch} from "redux";
 import * as Chat from 'Store/Chat'
@@ -24,4 +24,4 @@ const mapDispatchToProps = (dispatch:Dispatch<Actions>) => ({
   updateName: (current:Users.Types.IUser) => dispatch(Users.Actions.UpdateName(current))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Application)
+export default connect(mapStateToProps, mapDispatchToProps)(PageApplication)

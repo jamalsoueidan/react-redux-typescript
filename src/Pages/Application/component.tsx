@@ -12,7 +12,7 @@ interface IApplicationProps {
   updateName: (current: Users.Types.IUser) => any,
 }
 
-export default class Application extends React.Component<IApplicationProps> {
+export default class PageApplication extends React.Component<IApplicationProps> {
   componentDidMount() {
     this.props.loadMessages();
     this.props.loadUsers();

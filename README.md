@@ -78,6 +78,8 @@ Pages act as containers, and each url route correspond to one page.
 <Route path='/' component={PageApplication} />
 ```
 
+Read more: https://github.com/jamalsoueidan/react-redux-typescript/tree/master/src/Pages
+
 ## References:
 
 https://dev.to/resir014/a-type-safe-approach-to-redux-stores-in-typescript--5ajm
