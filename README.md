@@ -1,3 +1,7 @@
+# React Redux Typescript
+
+Play ground for Typescript with React & Redux
+
 ## Store
 
 Inside Store we have all the reducers that are configured for the Store.
@@ -18,9 +22,9 @@ export const reducers: Redux.Reducer<IApplicationState> = Redux.combineReducers<
 
 So each one of them have one folder.
 
-⋅⋅* Chat
-⋅⋅* Users
-⋅⋅* etc
+1. Chat
+2. Users
+3. etc
 
 Inside each folder we have 4 files, or more depending on how big the reducers become.
 
@@ -31,12 +35,12 @@ Inside each folder we have 4 files, or more depending on how big the reducers be
 
 If we have too many actions or reducers we can split them up in folders.
 
-⋅⋅* Actions/index.ts
-⋅⋅* Actions/LoadUsers.ts
-⋅⋅* Actions/UpdateName.ts
-⋅⋅* etc.
+1. Actions/index.ts
+2. Actions/LoadUsers.ts
+3. Actions/UpdateName.ts
+4. etc.
 
-#References:
+## References:
 
 https://dev.to/resir014/a-type-safe-approach-to-redux-stores-in-typescript--5ajm
 
