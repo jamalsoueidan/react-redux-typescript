@@ -4,7 +4,7 @@ Play ground for Typescript with React & Redux
 
 ## Store
 
-Inside Store we have all the reducers that are configured for the Store.
+Inside Store folder we have all the reducers that are configured for Redux.
 
 ```javascript
 export interface IApplicationState {
