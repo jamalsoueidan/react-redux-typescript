@@ -1,25 +1,29 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { ChatComponent, UserComponent } from 'Components'
+import { ComponentChat, ComponentUser, ComponentUsersList } from 'Components'
 import * as Chat from 'Store/Chat'
-import * as User from 'Store/User'
+import * as Users from 'Store/Users'
 
 interface IApplicationProps {
   messages: Chat.Types.IMessage[],
-  user:  User.Types.IUser,
+  users: Users.Types.IUsers,
   loadMessages: () => void,
-  updateName: (user: User.Types.IUser) => any
+  loadUsers: () => void,
+  updateName: (current: Users.Types.IUser) => any,
 }
 
 export default class Application extends React.Component<IApplicationProps> {
   componentDidMount() {
     this.props.loadMessages();
+    this.props.loadUsers();
   }
+
   render() {
     return(
       <div>
-        <UserComponent name={this.props.user.name} updateName={this.props.updateName} />
-        <ChatComponent messages={this.props.messages} />
+        <ComponentUser current={this.props.users.current} updateName={this.props.updateName} />
+        <ComponentChat messages={this.props.messages} />
+        <ComponentUsersList users={this.props.users.all} />
       </div>
     )
   }

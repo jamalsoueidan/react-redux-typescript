@@ -1,6 +1,6 @@
 import * as Redux from 'redux'
 import * as Chat from './Chat'
-import * as User from './User'
+import * as Users from './Users'
 
 // https://github.com/piotrwitek/react-redux-typescript-guide/blob/master/playground/src/redux/root-reducer.ts
 import { routerReducer, RouterState } from 'react-router-redux';
@@ -10,12 +10,12 @@ import { routerReducer, RouterState } from 'react-router-redux';
 
 export interface IApplicationState {
     chat: Chat.Types.IMessages,
-    user: User.Types.IUser,
+    users: Users.Types.IUsers,
     router: RouterState 
 }
 
 export const reducers: Redux.Reducer<IApplicationState> = Redux.combineReducers<IApplicationState>({
     chat: Chat.Reducer,
-    user: User.Reducer,
+    users: Users.Reducer,
     router: routerReducer
 })

@@ -5,11 +5,19 @@ interface Props {
     messages: Chat.Types.IMessage[]
 }
 
-const ChatList: React.SFC<Props> = (props: Props): JSX.Element => {
+const ComponentChat: React.SFC<Props> = (props: Props): JSX.Element => {
     if(!props.messages) {
         return <div>Vent et øjeblik</div>
     }
-    return (<div>{props.messages.map(value => <div key={value.id}>{value.message}</div>)}</div>)
+    
+    const messages = props.messages.map(value => <div key={value.id}>{value.message}</div>)
+    
+    return (
+        <div>
+            <h3>Chat messages</h3>
+            {messages}
+        </div>
+    )
 }
 
-export default ChatList
+export default ComponentChat
