@@ -8,8 +8,8 @@ Inside Store folder we have all the reducers that are configured for Redux.
 
 ```javascript
 export interface IApplicationState {
-    chat: Chat.Types.IMessages,
-    users: Users.Types.IUsers,
+    chat: Chat.Types.IMessages, //Store/Chat
+    users: Users.Types.IUsers, //Store/Users
     router: RouterState 
 }
 
@@ -26,14 +26,14 @@ So each one of them have one folder.
 2. Store/Users
 3. etc
 
-Inside each folder we have 4 files, or more depending on how big the reducers become.
+Inside each folder we have 4 files, or more depending on how big-fat the reducers become.
 
 1. actions.ts
 2. index.ts 
 3. reducers.ts
 4. types.ts
 
-If we have too many actions or reducers we can split them up in folders.
+If we have many actions or reducers we can split them up in folders.
 
 1. Actions/index.ts
 2. Actions/LoadUsers.ts
