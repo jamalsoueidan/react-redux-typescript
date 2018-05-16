@@ -7,6 +7,8 @@ node_modules/
 typings/
 npm-debug.log
 tmp/
-dist/
+dist/bundle.js
+dist/index.html
+dist/vendor.js
 *.log*
 .history

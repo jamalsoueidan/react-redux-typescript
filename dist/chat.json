@@ -1,0 +1,20 @@
+[{
+    "message": "hej",
+    "id": 0,
+    "userId": 1
+},
+{
+    "message": "goddag",
+    "id": 1,
+    "userId": 4
+},
+{
+    "message": "hejxx",
+    "id": 2,
+    "userId": 2
+},
+{
+    "message": "hfffej",
+    "id": 3,
+    "userId": 3
+}]
