@@ -40,6 +40,8 @@ If we have too many actions or reducers we can split them up in folders.
 3. Actions/UpdateName.ts
 4. etc.
 
+Read more: https://github.com/jamalsoueidan/react-redux-typescript/tree/master/src/Store
+
 ## Components 
 
 Component is very simple, they only accept props and actions!
