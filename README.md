@@ -22,8 +22,8 @@ export const reducers: Redux.Reducer<IApplicationState> = Redux.combineReducers<
 
 So each one of them have one folder.
 
-1. Chat
-2. Users
+1. Store/Chat
+2. Store/Users
 3. etc
 
 Inside each folder we have 4 files, or more depending on how big the reducers become.
@@ -39,6 +39,42 @@ If we have too many actions or reducers we can split them up in folders.
 2. Actions/LoadUsers.ts
 3. Actions/UpdateName.ts
 4. etc.
+
+## Components 
+
+Component is very simple, they only accept props and actions!
+
+Each folder have one component, and each component can have nested components if needed.
+
+1. Components/Chat
+2. Components/User
+3. Components/UsersList`
+
+All components should be exported in Components/index
+
+```javascript
+export { default as ComponentChat } from './Chat'
+export { default as ComponentUser } from './User'
+export { default as ComponentUsersList } from './UsersList'
+```
+
+This allow them to imported like this anywhere.
+
+```javascript
+import { ComponentChat, ComponentUser, ComponentUsersList } from 'Components'
+```
+
+We are using **[Component][Name]**, this way we always knows this is Component we are working with.
+
+## Pages
+
+Pages act as containers, and each url route correspond to one page.
+
+**Pages are the only containers that connect to redux!**
+
+```javascript
+<Route path='/' component={PageApplication} />
+```
 
 ## References:
 

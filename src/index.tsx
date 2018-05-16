@@ -5,7 +5,7 @@ import { Router, Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import { configureStore } from './Store'
-import Application from 'Pages/Application'
+import { PageApplication } from 'Pages'
 
 
 const history = createBrowserHistory()
@@ -15,7 +15,7 @@ const store = configureStore(history);
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route path='/' component={Application} />
+      <Route path='/' component={PageApplication} />
     </ConnectedRouter>
   </Provider>, 
   document.getElementById("application")
