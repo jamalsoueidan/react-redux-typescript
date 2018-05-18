@@ -1,4 +1,5 @@
 import { Action } from 'redux'
+import { RSAAction } from 'redux-api-middleware';
 
 export interface IUser {
     id: number,
@@ -33,5 +34,7 @@ export interface ILoadUsersSuccessAction extends Action {
     readonly type: LOAD_USERS_SUCCESS,
     payload: IUser[]
 }
+
+export interface ILoadUsers extends RSAAction<LOAD_USERS_REQUEST, LOAD_USERS_SUCCESS, LOAD_USERS_FAILURE> {}
 
 export type UsersActions = IUpdateName | ILoadUsersSuccessAction

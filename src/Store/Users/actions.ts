@@ -10,7 +10,7 @@ export const UpdateName: ActionCreator<Types.IUpdateName> = (current: Types.IUse
 })
 
 
-export const LoadUsers: ActionCreator<any> = () => ({
+export const LoadUsers: ActionCreator<Types.ILoadUsers> = () => ({
   [RSAA]: {
     types: [Types.LOAD_USERS_REQUEST, Types.LOAD_USERS_SUCCESS, Types.LOAD_USERS_FAILURE],
     endpoint: '/dist/users.json',

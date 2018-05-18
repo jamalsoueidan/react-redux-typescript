@@ -1,4 +1,5 @@
 import { Action } from 'redux';
+import { RSAAction } from 'redux-api-middleware';
 
 export interface IMessage {
     message: string,
@@ -21,6 +22,10 @@ export type LOAD_MESSAGE_FAILURE = typeof LOAD_MESSAGE_FAILURE;
 export interface ILoadMessagesSuccessAction extends Action {
     type: LOAD_MESSAGE_SUCCESS, 
     payload: IMessage[]
+}
+
+export interface ILoadMessage extends RSAAction<LOAD_MESSAGE_REQUEST, LOAD_MESSAGE_SUCCESS, LOAD_MESSAGE_FAILURE> {
+
 }
 
 export type ChatActions = ILoadMessagesSuccessAction
