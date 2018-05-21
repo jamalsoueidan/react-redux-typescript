@@ -1,6 +1,6 @@
 import PageApplication from './component'
 import {connect} from 'react-redux'
-import {Dispatch} from "redux";
+import {Dispatch, Action} from "redux";
 import * as Chat from 'Store/Chat'
 import * as Users from 'Store/Users'
 
@@ -16,9 +16,9 @@ const mapStateToProps = ({chat, users}: IApplicationState) => ({
   users: users
 })
 
-export type Actions = Chat.Types.ILoadMessagesSuccessAction | Users.Types.IUpdateName
+export type DispatchActions = Chat.Types.ILoadMessage | Users.Types.ILoadUsers
 
-const mapDispatchToProps = (dispatch:Dispatch<Actions>) => ({
+const mapDispatchToProps = (dispatch: Dispatch<Action>) => ({
   loadMessages: () => dispatch(Chat.Actions.LoadMessages()),
   loadUsers: () => dispatch(Users.Actions.LoadUsers()),
   updateName: (current:Users.Types.IUser) => dispatch(Users.Actions.UpdateName(current))
