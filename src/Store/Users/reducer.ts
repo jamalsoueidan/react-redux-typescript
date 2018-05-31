@@ -10,14 +10,14 @@ export const initialState: Types.IUsers = {
   all: []
 };
 
-const current: R<Types.IUser> = (state: Types.IUser, action: Types.IUpdateName) => {
+const current: R<Types.IUser> = (state: Types.IUser, action: Types.IUpdateName):Types.IUser => {
   if(action.type === Types.UPDATE_NAME)
       return action.payload.current
 
   return state;
 }
 
-const users: R<Types.IUser[]> = (state: Types.IUser[], action: Types.ILoadUsersSuccessAction) => {
+const users: R<Types.IUser[]> = (state: Types.IUser[], action: Types.ILoadUsersSuccessAction): Types.IUser[] => {
   if( action.type === Types.LOAD_USERS_SUCCESS )
       return action.payload;
       
@@ -26,9 +26,9 @@ const users: R<Types.IUser[]> = (state: Types.IUser[], action: Types.ILoadUsersS
 
 // export default can lead to problems
 // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
-export const Reducer: R<Types.IUsers> = (state: Types.IUsers = initialState, action: Types.UsersActions) => {
+export const Reducer: R<Types.IUsers> = (state: Types.IUsers = initialState, action: Types.UsersActions): Types.IUsers => {
   return {
     current: current(state.current, action),
-    all: users(state.all, action)
+    all: users(state.all, action),
   }
 };

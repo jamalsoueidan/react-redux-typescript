@@ -9,7 +9,7 @@ export const initialState: Types.IMessages = {
 
 // export default can lead to problems
 // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
-export const Reducer: R<Types.IMessages> = (state: Types.IMessages = initialState, action: Types.ChatActions) => {
+export const Reducer: R<Types.IMessages> = (state: Types.IMessages = initialState, action: Types.ChatActions): Types.IMessages => {
   switch ((action as Types.ChatActions).type) {
     case Types.LOAD_MESSAGE_SUCCESS:
       return { 

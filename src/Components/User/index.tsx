@@ -16,7 +16,7 @@ const ComponentUser: React.SFC<Props> = (props: Props):JSX.Element => {
         input.focus();
     }
 
-    const name:any = props.current.name 
+    const name:string = props.current.name 
 
     return(
         <form onSubmit={onSubmit}>

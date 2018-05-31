@@ -2,7 +2,7 @@ import { RSAA, RSAAction } from 'redux-api-middleware';
 import { ActionCreator, Action } from 'redux'
 import * as Types from './types'
 
-export const LoadMessages: ActionCreator<any> = () => ({
+export const LoadMessages: ActionCreator<any> = ():Types.ILoadMessages  => ({
   [RSAA]: {
     types: [
       Types.LOAD_MESSAGE_REQUEST, 

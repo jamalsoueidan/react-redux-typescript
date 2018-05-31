@@ -2,7 +2,7 @@ import { ActionCreator } from 'redux'
 import { RSAA, RSAAction } from 'redux-api-middleware';
 import * as Types from './types'
 
-export const UpdateName: ActionCreator<Types.IUpdateName> = (current: Types.IUser) => ({
+export const UpdateName: ActionCreator<Types.IUpdateName> = (current: Types.IUser): Types.IUpdateName => ({
     type: Types.UPDATE_NAME,
     payload: {
       current
@@ -10,7 +10,7 @@ export const UpdateName: ActionCreator<Types.IUpdateName> = (current: Types.IUse
 })
 
 
-export const LoadUsers: ActionCreator<any> = () => ({
+export const LoadUsers: ActionCreator<any> = (): Types.ILoadUsers => ({
   [RSAA]: {
     types: [Types.LOAD_USERS_REQUEST, Types.LOAD_USERS_SUCCESS, Types.LOAD_USERS_FAILURE],
     endpoint: '/dist/users.json',
