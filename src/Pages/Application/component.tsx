@@ -3,7 +3,15 @@ import * as ReactDOM from "react-dom";
 import { ComponentChat, ComponentUser, ComponentUsersList } from 'Components'
 import * as Typing from './typing'
 
-export default class PageApplication extends React.Component<Typing.IApplicationState & Typing.IMapDispatchToProps> {
+interface OwnState {
+  loading: boolean
+}
+
+export default class PageApplication extends React.Component<Typing.IApplicationState & Typing.IMapDispatchToProps, OwnState> {
+  state = {
+    loading: false
+  }
+
   componentDidMount() {
     this.props.loadMessages();
     this.props.loadUsers();
