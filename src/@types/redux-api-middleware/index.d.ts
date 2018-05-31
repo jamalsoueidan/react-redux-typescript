@@ -1,5 +1,6 @@
 declare module 'redux-api-middleware' {
-    import {Middleware, Action} from "redux";
+    //https://github.com/reduxjs/redux-thunk/blob/master/index.d.ts
+    import { Middleware, Action } from "redux";
 
     export const RSAA: string;
     export const apiMiddleware: Middleware;

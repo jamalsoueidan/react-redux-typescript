@@ -1,18 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ComponentChat, ComponentUser, ComponentUsersList } from 'Components'
-import * as Chat from 'Store/Chat'
-import * as Users from 'Store/Users'
+import * as Typing from './typing'
 
-interface IApplicationProps {
-  messages: Chat.Types.IMessage[],
-  users: Users.Types.IUsers,
-  loadMessages: () => void,
-  loadUsers: () => void,
-  updateName: (current: Users.Types.IUser) => any,
-}
-
-export default class PageApplication extends React.Component<IApplicationProps> {
+export default class PageApplication extends React.Component<Typing.IApplicationState & Typing.IMapDispatchToProps> {
   componentDidMount() {
     this.props.loadMessages();
     this.props.loadUsers();
@@ -22,7 +13,7 @@ export default class PageApplication extends React.Component<IApplicationProps> 
     return(
       <div>
         <ComponentUser current={this.props.users.current} updateName={this.props.updateName} />
-        <ComponentChat messages={this.props.messages} />
+        <ComponentChat messages={this.props.chat.messages} />
         <ComponentUsersList users={this.props.users.all} />
       </div>
     )

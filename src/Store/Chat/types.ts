@@ -24,8 +24,7 @@ export interface ILoadMessagesSuccessAction extends Action {
     payload: IMessage[]
 }
 
-export interface ILoadMessage extends RSAAction<LOAD_MESSAGE_REQUEST, LOAD_MESSAGE_SUCCESS, LOAD_MESSAGE_FAILURE> {
-
+export interface ILoadMessages extends RSAAction<LOAD_MESSAGE_REQUEST, LOAD_MESSAGE_SUCCESS, LOAD_MESSAGE_FAILURE> {
 }
 
 export type ChatActions = ILoadMessagesSuccessAction

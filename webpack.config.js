@@ -37,5 +37,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
+  optimization: {
+    splitChunks: {
+      chunks: "initial",
+    },
+  },
 };
